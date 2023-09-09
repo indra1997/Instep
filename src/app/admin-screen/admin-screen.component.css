@@ -1,0 +1,38 @@
+.applicantTable{
+    
+}
+
+.heading{
+    /* margin-right: 1vw; */
+    background: #963596 !important;
+    color: white!important;
+    font-size: 15px;
+    line-height: 30px;
+    height: 57px !important;
+    width: 100% !important;
+  }
+
+  .nameColumn{
+    /* margin-right: 1vw; */
+    background: #f8f7f8;
+    color: #060006!important;
+    font-size: 15px;
+    line-height: 30px;
+    height: 57px !important;
+    width: 100% !important;
+  }
+
+  .row{
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .confirmBtn{
+    background: white !important;
+    color: #963596!important;
+    font-size: 15px;
+    line-height: 30px;
+    height: 57px !important;
+    width: 100% !important;
+  }

@@ -1,0 +1,52 @@
+<div style="margin: 15px;">
+    <mat-tab-group>
+        <mat-tab label="Assign Mentors/Evaluators to Applicants">
+            <div class= "applicantTable" *ngIf="applicantwithoutMentorList.length == 0">
+                <div style="display: flex;flex-direction: row;width: 100%;margin-top: 5px;">
+                    
+                    <div style="width: 40%;">
+                        <button mat-stroked-button class="heading">Name of Applicant</button>
+                    </div>
+                    <div style="width: 60%;">
+                        <button mat-stroked-button class="heading">Evaluators</button>
+                    </div>
+                </div>
+                
+                
+                <!-- <div *ngFor="let applicant of applicantwithoutMentorList"> -->
+                
+                    <div class="row">
+                    
+                        <div style="width: 40%;">
+                            <mat-button-toggle  class="nameColumn">Indrajit Jagdale</mat-button-toggle>
+                            <!-- <p class="nameColumn">Indrajit Jagdale</p> -->
+                        </div>
+                        <div style="width: 50%;margin-top: 2px;">
+                            <div >
+                                <mat-form-field style="width:100%; background-color: white !important;">
+                                    <mat-label>Allocate evaluators (Select exactly 3 evaluators) </mat-label>
+                                    <mat-select [formControl]="evaluators" multiple required>
+                                      <mat-option *ngFor="let mentor of mentorNameList" value="{{mentor}}">
+                                        {{mentor}}
+                                      </mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                            </div>
+                        </div>
+                        
+                        <div style="width: 10%;margin-left: 2px;">
+                            <button mat-raised-button class="confirmBtn" [disabled]="evaluators.value===null || evaluators.value.length!=3">Set</button>
+                        </div>
+                    </div>
+                
+                
+                    
+                <!-- </div> -->
+            </div>
+            
+        </mat-tab>
+        <mat-tab label="Completed Evaluations"> Completed Evaluations </mat-tab>
+    </mat-tab-group>
+</div>
+
+  
